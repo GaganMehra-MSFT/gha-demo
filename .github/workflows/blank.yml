@@ -16,3 +16,4 @@ jobs:
     steps:
       - name: Build Step
         run: echo "Hello, ${{vars.My_Name}}"
+        run: echo "Hello, ${{secrets.DOCKER_PASSWORD}}"
