@@ -3,8 +3,12 @@ name: Hello World
 on: workflow_dispatch             # Trigger type << This one is manual only.
 jobs:
   hello:                          # Name of the job
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest        # On which machine will it run
     steps:
       - name: HelloStep1
-        run: echo "Welcome to GHA"
-  
+      #   run: echo "Welcome to GHA"
+      # Modifying the line code below to run multiple cmd lines.
+        run: |
+          echo "Welcome to GHA Line1"
+          echo "Welcome to GHA Line2"
+          echo "Welcome to GHA Line3"
