@@ -1,14 +1,18 @@
-# This is a basic workflow to help you get started with Actions
 name: Hello World
-on: workflow_dispatch             # Trigger type << This one is manual only.
+on:  workflow_dispatch
 jobs:
-  hello:                          # Name of the job
-    runs-on: ubuntu-latest        # On which machine will it run
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: HelloStep1
-      #   run: echo "Welcome to GHA"
-      # Modifying the line code below to run multiple cmd lines.
-        run: |
-          echo "Welcome to GHA Line1"
-          echo "Welcome to GHA Line2"
-          echo "Welcome to GHA Line3"
+      - name: Build Step
+        run: echo "A demo build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Phase
+        run: echo "Running test cases"
+  deploy:
+    runs-on:  ubuntu-latest
+    steps:
+      - name: Deploy the App
+        run: echo "deploying the app"
