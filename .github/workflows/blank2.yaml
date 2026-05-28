@@ -16,28 +16,28 @@ jobs:
     steps:
       - name: Deploy the App
         run: "Deploying the application"
-# +++++++++++++++++++++++
++++++++++++++++++++++++
 
-# # 1. Workflow Name (Optional but recommended)
-# name: My First GitHub Actions Workflow
+# 1. Workflow Name (Optional but recommended)
+name: My First GitHub Actions Workflow
 
-# # 2. Trigger / Event (Mandatory: Tells GHA WHEN to run)
-# on:
-#   push:
-#     branches: [ main ]
-#   workflow_dispatch: # Allows you to run it manually from the GitHub UI
+# 2. Trigger / Event (Mandatory: Tells GHA WHEN to run)
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allows you to run it manually from the GitHub UI
 
-# # 3. Jobs Block (Mandatory: Container for your tasks)
-# jobs:
-#   my_first_job: # Job Name (User-defined)
+# 3. Jobs Block (Mandatory: Container for your tasks)
+jobs:
+  my_first_job: # Job Name (User-defined)
     
-#     # 4. Runner (Mandatory: Tells GHA WHERE to run)
-#     runs-on: ubuntu-latest 
+    # 4. Runner (Mandatory: Tells GHA WHERE to run)
+    runs-on: ubuntu-latest 
 
-#     # 5. Steps Block (Your existing code goes here)
-#     steps:
-#       - name: HelloStep1
-#         run: |
-#           echo "Welcome to GHA Line1"
-#           echo "Welcome to GHA Line2"
-#           echo "Welcome to GHA Line3"
+    # 5. Steps Block (Your existing code goes here)
+    steps:
+      - name: HelloStep1
+        run: |
+          echo "Welcome to GHA Line1"
+          echo "Welcome to GHA Line2"
+          echo "Welcome to GHA Line3"
