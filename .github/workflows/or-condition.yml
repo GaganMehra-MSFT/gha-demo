@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run for Gagan or GaganMehra-MSFT
-        if: github.actor == 'Gagan' || github.actor == 'GaganMehra'
+        if: github.actor == 'Gagan' || github.actor == 'GaganMehra' || github.actor == 'GaganMehra'
         run:  echo "Running on main branch by Gagan"
     
